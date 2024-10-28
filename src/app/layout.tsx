@@ -9,7 +9,7 @@ const monaspaceRadon = localFont({
 });
 
 export const metadata: Metadata = {
-  icons: ["logo.jpg"],
+  icons: ["logo.svg"],
   title: "Shawn求索之旅",
   description: "Shawn's odyssey of exploration",
 };
@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${monaspaceRadon.variable} antialiased`}>{children}</body>
+      <body className={`${monaspaceRadon.className} antialiased bg-background text-foreground min-h-screen`}>
+        {children}
+      </body>
     </html>
   );
 }
