@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -21,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${monaspaceRadon.className} antialiased bg-background text-foreground min-h-screen`}>
+      <body className={`${monaspaceRadon.className} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
