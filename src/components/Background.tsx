@@ -18,8 +18,8 @@ const Background = () => {
         />
         <Suspense fallback={null}>
           {pathname === "/" && <DesktopModel />}
-          <Stars />
         </Suspense>
+        <Stars />
       </Canvas>
     </div>
   );
