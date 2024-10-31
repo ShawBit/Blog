@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${monaspaceRadon.className} antialiased`}>
+      <body
+        className={`${monaspaceRadon.className} bg-background text-foreground antialiased`}
+      >
         <Navbar />
         <Background />
         {children}
