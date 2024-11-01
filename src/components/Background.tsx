@@ -16,10 +16,12 @@ const Background = () => {
           intensity={1.5}
           position={[1, 1, 0]}
         />
-        <Suspense fallback={null}>
-          {pathname === "/" && <DesktopModel />}
-        </Suspense>
         <Stars />
+        {pathname === "/" && (
+          <Suspense fallback={null}>
+            <DesktopModel />
+          </Suspense>
+        )}
       </Canvas>
     </div>
   );
