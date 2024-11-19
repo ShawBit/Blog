@@ -8,13 +8,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function BlogDetails({ params }: Props) {
+export default async function BlogDetails({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const { posts }: { posts: BlogPost[] } = await getBlogPosts();
   const postIndex = posts.findIndex((post) => post.metadata.slug === slug);
@@ -88,6 +86,6 @@ export async function generateStaticParams() {
   const { posts }: { posts: BlogPost[] } = await getBlogPosts();
 
   return posts.map((post) => ({
-    slug: post.metadata.slug,
+    slug: post.slug,
   }));
 }
