@@ -20,13 +20,13 @@ export default async function WeeklyList({
           {isSide ? (
             <></>
           ) : (
-            <span className="text-[#8585a8] min-w-28">
+            <span className="text-[#8585a8] min-w-28 font-medium">
               {dayjs(post.metadata.date).format("YYYY-MM-DD")}
             </span>
           )}
           <Link
             href={`/blog/${post.metadata.slug}`}
-            className="hover:border-b hover:border-border truncate transition-colors duration-500 ease-in-out"
+            className="hover:border-b hover:border-border truncate transition-colors duration-500 ease-in-out font-medium"
           >
             {post.metadata.title}
           </Link>
