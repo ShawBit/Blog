@@ -5,9 +5,9 @@ import { ViewTransitions } from "next-view-transitions";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const monaspaceRadon = localFont({
-  src: "./fonts/MonaspaceRadon.woff2",
-  variable: "--font-monaspace-radon",
+const hytmr = localFont({
+  src: "./fonts/HYTMR.woff2",
+  variable: "--font-hytmr",
   weight: "100 900",
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${monaspaceRadon.className} bg-background text-foreground antialiased`}
+          className={`${hytmr.className} bg-background text-foreground antialiased`}
         >
           <Navbar />
           <Background />
