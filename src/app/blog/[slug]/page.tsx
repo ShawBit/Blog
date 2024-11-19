@@ -1,4 +1,5 @@
 import BlogList from "@/components/blog/BlogList";
+import Comments from "@/components/mdx/Comments";
 import MDXComponents from "@/components/mdx/MDXComponents";
 import TOC from "@/components/mdx/TOC";
 import type { BlogPost } from "@/types";
@@ -73,6 +74,7 @@ export default async function BlogDetails({
               <></>
             )}
           </div>
+          <Comments />
         </div>
         <div className="hidden md:flex flex-col justify-start md:w-1/5 pl-4">
           <TOC />
