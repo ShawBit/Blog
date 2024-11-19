@@ -1,5 +1,5 @@
 import { routes } from "@/constants";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const Navbar = () => {
   return (

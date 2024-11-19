@@ -1,6 +1,7 @@
 import Background from "@/components/Background";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
+import { ViewTransitions } from "next-view-transitions";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -22,14 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${monaspaceRadon.className} bg-background text-foreground antialiased`}
-      >
-        <Navbar />
-        <Background />
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${monaspaceRadon.className} bg-background text-foreground antialiased`}
+        >
+          <Navbar />
+          <Background />
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
