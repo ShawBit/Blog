@@ -3,6 +3,5 @@
 First, run the development server:
 
 ```bash
-# or
 bun --bun run dev
 ```

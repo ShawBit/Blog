@@ -26,7 +26,7 @@ export default async function WeeklyList({
           )}
           <Link
             href={`/blog/${post.metadata.slug}`}
-            className="hover:border-b hover:border-border truncate transition-colors duration-500 ease-in-out font-medium"
+            className="hover:border-b hover:border-border truncate transition-colors duration-500 ease-in-out text-lg font-medium"
           >
             {post.metadata.title}
           </Link>

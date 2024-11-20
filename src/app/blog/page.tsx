@@ -1,6 +1,6 @@
 import BlogList from "@/components/blog/BlogList";
+import { getBlogPosts } from "@/lib/blog";
 import type { BlogPost } from "@/types";
-import { getBlogPosts } from "@/utils/blog";
 
 async function BlogPage() {
   const { posts }: { posts: BlogPost[] } = await getBlogPosts();

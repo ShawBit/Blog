@@ -25,6 +25,8 @@ function TOC() {
   return (
     <>
       <ul className="sticky top-32 right-0">
+        <span className="text-lg font-bold">目录</span>
+        <hr className="border-t border-gray-400 my-4" />
         {headings.map(({ text, id, level }) => (
           <li
             key={id}
