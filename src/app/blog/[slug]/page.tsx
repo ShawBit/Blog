@@ -8,6 +8,8 @@ import dayjs from "dayjs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 
 export default async function BlogDetails({
   params,
@@ -39,18 +41,32 @@ export default async function BlogDetails({
         </aside>
         <div className="w-full md:w-3/5">
           <article id="article">
-            <h1 className="text-4xl font-bold mb-2 text-wrap break-words">
+            <h1 className="text-4xl font-black mb-2 text-wrap break-words">
               {metadata.title}
             </h1>
-            <div className="flex gap-24">
-              <div>
-                Updated time: {dayjs(metadata.date).format("YYYY-MM-DD")}
-              </div>
-              <div>Author: {metadata.author}</div>
+            <div className="flex gap-24 font-bold text-base">
+              <div>更新时间： {dayjs(metadata.date).format("YYYY-MM-DD")}</div>
+              <div>作者： {metadata.author}</div>
             </div>
             <MDXRemote
               source={content}
               components={MDXComponents}
+              options={{
+                parseFrontmatter: false,
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                  rehypePlugins: [
+                    [
+                      rehypePrettyCode,
+                      {
+                        keepBackground: true,
+                        theme: "one-dark-pro",
+                        defaultLang: "typescript",
+                      },
+                    ],
+                  ],
+                },
+              }}
             />
           </article>
           <hr className="border-t border-gray-400 my-4" />

@@ -25,12 +25,12 @@ function TOC() {
   return (
     <>
       <ul className="sticky top-32 right-0">
-        <span className="text-lg font-bold">目录</span>
+        <span className="text-2xl font-bold">目录</span>
         <hr className="border-t border-gray-400 my-4" />
         {headings.map(({ text, id, level }) => (
           <li
             key={id}
-            className={`my-2 ${
+            className={`my-2 hover:text-red-300 font-bold text-lg ${
               level === "H3" ? "ml-4" : level === "H4" ? "ml-8" : ""
             }`}
           >
