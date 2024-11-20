@@ -32,7 +32,7 @@ export default async function BlogDetails({
 
   return (
     <div className="min-h-screen w-full">
-      <div className="flex px-48 pt-32 gap-8">
+      <div className="flex px-4 md:px-48 pt-32 gap-8">
         <aside className="hidden md:block w-1/5 h-full max-h-screen sticky top-32 left-0 overflow-auto">
           <BlogList
             isSide
@@ -94,7 +94,7 @@ export default async function BlogDetails({
           </div>
           <Comments />
         </div>
-        <div className="hidden md:flex flex-col justify-start md:w-1/5 ml-4">
+        <div className="sticky top-32 right-0 hidden md:block w-1/5 ml-4">
           <TOC />
         </div>
       </div>
