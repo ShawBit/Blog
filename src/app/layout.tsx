@@ -47,7 +47,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${hytmr.className} bg-background text-foreground antialiased font`}
+          className={`${hytmr.className} bg-background text-foreground antialiased dark`}
         >
           <Navbar />
           <Background />
