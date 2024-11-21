@@ -103,7 +103,7 @@ const MDXComponents: MDXComponentsProps = {
   ),
   li: (props) => (
     <li
-      className="mb-2"
+      className="mb-2 font-bold"
       {...props}
     />
   ),

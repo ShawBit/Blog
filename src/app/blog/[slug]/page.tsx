@@ -94,7 +94,7 @@ export default async function BlogDetails({
           </div>
           <Comments />
         </div>
-        <div className="sticky top-32 right-0 hidden md:block w-1/5 ml-4">
+        <div className="hidden md:block w-1/5 ml-4">
           <TOC />
         </div>
       </div>
